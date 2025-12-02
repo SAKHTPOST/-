@@ -1,0 +1,5 @@
+{
+  "name": "Post Box",
+  "description": "A slow, thoughtful messaging app inspired by postal systems. Send limited daily letters anonymously or privately, supported in English and Persian.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Box</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom font classes */
+      .font-heading-en { font-family: 'Cinzel', serif; }
+      .font-body-en { font-family: 'Lora', serif; }
+      .font-heading-fa { font-family: 'Vazirmatn', sans-serif; }
+      .font-body-fa { font-family: 'Vazirmatn', sans-serif; }
+      
+      /* Paper texture effect */
+      .bg-paper {
+        background-color: #fdfbf7;
+        background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+      }
+      
+      /* Scrollbar hiding for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: {
+                900: '#1a1818',
+                800: '#2d2a2a',
+                600: '#5c5555',
+                400: '#a8a29e',
+              },
+              paper: {
+                100: '#fdfbf7',
+                200: '#f2ece4',
+                300: '#e6ded3',
+              },
+              stamp: {
+                red: '#8a2c2c',
+                blue: '#2c4a8a',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-paper text-ink-900 h-full overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
